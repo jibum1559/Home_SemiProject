@@ -1,0 +1,5 @@
+INDEX VERSION 1.131
+C:\Users\user\Desktop\semi_project\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4204133569.index
+\LikeList\src\main\java
+C:\Users\user\Desktop\semi_project\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2060771749.index
+\LikeList\src\main\java

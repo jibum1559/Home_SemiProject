@@ -1,0 +1,35 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="java.util.List" %>    
+<%@ page import ="com.kh.semi.likeList.LikeRealestate" %>
+<%@ page import ="com.kh.semi.likeList.ProductDAO" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>마이페이지</title>
+</head>
+<body>
+	<h1>찜한 매물</h1>
+	<hr style="widht: 85%;">
+    <div style="font-weight: bold;">
+	<h style="color: rgb(0, 60, 255);">전체매물</h>
+		아파트 빌라 오피스텔 원룸 주택 
+    </div><br>
+    
+    <div>
+    <% 
+	    LikeListDAO likelistDAO = new LikeListDAO();
+	    List<LikeRealestate> LikeRealestates = likelistDAO.getAllLikeRealestates();
+	    
+	    for(LikeRealestate l : LikeRealestates) {
+	%>
+	
+    <%= l.getRealestateName() %>
+	    
+    
+    </div>
+</body>
+</html>
