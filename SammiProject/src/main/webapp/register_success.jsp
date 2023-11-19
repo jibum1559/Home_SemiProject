@@ -16,7 +16,11 @@
 				<p>가입 완료! <%= session.getAttribute("ID") %>님!<br> 드루와방의 회원이 되신 것을 환영합니다.^^</p>  
 		</div>
 	<script>
-		
+		//3초 후 홈페이지로 이동하는 javascript
+		setTimeout(function() {
+			//이동할 페이지 경로 설정
+			window.location.href="Main.jsp";
+		}, 4000); //4000 = 4초
 
 		// 이미지를 차례대로 표시하는 함수
 		function showImagesSequentially() {

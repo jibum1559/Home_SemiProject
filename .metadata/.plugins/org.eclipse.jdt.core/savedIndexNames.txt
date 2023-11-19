@@ -21,7 +21,6 @@ INDEX VERSION 1.131+C:\Users\user\Desktop\semi_project\.metadata\.plugins\org.ec
 3393384157.index
 3508297551.index
 867034682.index
-252141996.index
 397153566.index
 235662290.index
 4127139582.index

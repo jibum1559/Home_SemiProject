@@ -5,22 +5,30 @@
 <head>
 <meta charset="UTF-8">
 <title>회원탈퇴 사이트</title>
-<link rel="stylesheet" type="text/css" href="./css/styles.css">
+<link rel="stylesheet" type="text/css" href="./css/MyPage.css">
 </head>
-<body id="deleteBody">
-   <header>
+<body>
+	
+	<script>
+		window.onload = function() {
+	    		var isError = <%=request.getParameter("error") %>;
+	    		console.log(isError);
+	    		if(isError) {
+	    			alert("아이디 또는 비밀번호가 일치하지 않습니다.");
+	    		}
+	    	}
+	</script>	
+        <header>
             <div class="use_list_box">
                 <div class="use_list">
-                        <a href="Main.jsp" class="use_main" onclik>
+                        <a href="메인페이지로 이동" class="use_main">
                             <span><img src="./img/로고.png" class="logo"></span>
                         </a>
                     <ul class="use">
                         <li>
-								 <a href="Main.jsp" class="use_logout" title="로그아웃" >
-	                                <span><img src="./img/logout.png" class="logout"><br>LOGOUT</span>
-	                          	 </a>
-                          		
-								
+                            <a href="메인페이지로 이동" class="use_logout" title="로그아웃">
+                                <span><img src="./img/logout.png" class="logout"><br>LOGOUT</span>
+                            </a>
                         </li>
                         <li>
                             <a href="마이페이지로 이동" class="use_mypage" title="마이페이지">
@@ -37,32 +45,43 @@
                 </div>
 
             </div>
-            </header>
-
-
-
-<div>
-	<section>
-	<h2>회원탈퇴</h2>
-    <form action="DeleteUserServlet" method="post">
-            <div id="deleteId">
-                <label for="ID">아이디 : </label>
-                <input type="text" placeholder="아이디를 입력하세요." id="ID" name="ID" required><br>
-            </div>
-            <div id="deletePw">
-                <label for="PASSWORD">비밀번호 : </label>
-                <input type="PASSWORD" placeholder="비밀번호를 입력하세요." id="PASSWORD" name="PASSWORD" required><br><br>
-            </div>
-            <br>
-         	<div>
-                <input type="submit" value="회원탈퇴" id="deleteButton" >
-            </div>
-    </form>
-    </section>
-</div>
-<script>
-
-</script>
-
-</body>
+        </header>
+        <section>
+            <nav class="left_category">
+                <div class="mypage" ><img src="./img/마이페이지_아이콘.png" alt="마이페이지 아이콘">
+                        마이페이지</div>
+                <ul>
+                    <li>내정보</li>
+                    <li>찜한 매물</li>
+                    <li>내 문의내역</li>
+                    <li>중개인 등록</li>
+                    <li style="color: #5887d6;"><a href="deleteUser.jsp">회원탈퇴</a></li>
+                </ul>
+                <hr>
+            </nav>
+        </section>
+            <article class="main">
+                <h1 class="delete">회원탈퇴</h1><br>
+                <hr class="width_line">
+                
+                <div class="dleletUser_box"> 
+                    <img src="./img/회원탈퇴.png" alt="확인이미지">
+                    <form action="DeleteUserServlet" method="post">
+                    <div id="deleteUserCheck">    
+                        <div id="deleteUserInfo">
+                            <label for="ID">아이디 : </label>
+                            <input type="text" placeholder="아이디 입력해주세요." id="ID" name="ID" required><br>
+                            <label for="PASSWORD">비밀번호 : </label>
+                            <input type="PASSWORD" placeholder="비밀번호 입력해주세요." id="PASSWORD" name="PASSWORD" required><br><br>
+                          
+                            <button type="submit" id="deleteButton">회원탈퇴</button>
+                        <!--<input type="submit" value="회원탈퇴" id="deleteButton">-->
+                        <!-- ******위에 input 대신 button으로 수정함 참고***** -->
+                              
+                        </div>
+                    </div>
+                </form>
+                </div>
+            </article>
+    </body>
 </html>

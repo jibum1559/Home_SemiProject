@@ -37,16 +37,24 @@ public class DeleteUserServlet extends HttpServlet {
 		String id = request.getParameter("ID");
 		String password = request.getParameter("PASSWORD");
 		
-		
 		String sql = "DELETE FROM USERINFO WHERE ID = ? AND PASSWORD =?";
 		PreparedStatement preparedStatement = connection.prepareStatement(sql);
+		
 		preparedStatement.setString(1, id);
 		preparedStatement.setString(2, password);
 		
-		preparedStatement.executeUpdate();
+		int rowsAffected = preparedStatement.executeUpdate();
+		
+		if(rowsAffected>0) {
+			response.sendRedirect("Delete_success.jsp");			
+		} else {
+			response.sendRedirect("deleteUser.jsp?error=true");	
+			request.setAttribute("error", "true");
+			
+		}
 		
 		
-		response.sendRedirect("Delete_success.jsp");
+		
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
