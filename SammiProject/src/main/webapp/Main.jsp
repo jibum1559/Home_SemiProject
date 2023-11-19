@@ -47,12 +47,29 @@
 						<%
 					  }
 						%>
-					 
+					
 					</li>
-					<li>
-						<a href="MyPage.jsp" class="use_mypage" title="마이페이지">
-							<span><img src="./img/유저.png" class="user"><br>MY</span>
-						</a>
+					
+					 <%
+    if (session.getAttribute("INTERMEDIARY_ID") != null) {
+        String id = (String) session.getAttribute("INTERMEDIARY_ID");
+        System.out.println("INTERMEDIARY_ID 값: " + id);
+%>
+        <li>
+            <a href="MyPageJong.jsp" class="use_mypage" title="중개인 마이페이지">
+                <span><img src="./img/유저.png" class="user"><br>MY</span>
+            </a>
+<%
+    } else {
+%>
+        <li>
+            <a href="MyPage.jsp" class="use_mypage" title="마이페이지">
+                <span><img src="./img/유저.png" class="user"><br>MY</span>
+            </a>
+<%
+    }
+%>	
+						
 					</li>
 					<li>
 						<a href="deleteUser.jsp" class="use_likelist" title="찜매물">

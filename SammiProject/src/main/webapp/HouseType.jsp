@@ -48,8 +48,8 @@
                     <li><a href="IdCheck.jsp">내정보</a></li>
                     <li style="color: #5887d6;"><a href="MyPageLikeList.jsp">찜한 매물</a></li>
                     <li>내 문의내역</li>
-                    <li>중개인 등록</li>
-                    <li>회원탈퇴</li>
+                    <li onclick="location.href='myPageIntermediaryAdd.jsp'">중개인 등록</li>
+                    <li><a href="deleteUser.jsp">회원탈퇴</a></li>
                 </ul>
                 <hr>
             </nav>
