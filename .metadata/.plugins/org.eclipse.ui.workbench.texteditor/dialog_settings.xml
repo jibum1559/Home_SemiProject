@@ -1,17 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="&gt;&#x0D;&#x0A;    "/>
+		<item key="selection" value="recommend"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="recommend"/>
+			<item value="추천 매물"/>
+			<item value="메인"/>
+			<item value="mainbody"/>
+			<item value="main"/>
+			<item value="mainPageCenter"/>
+			<item value="회원가입"/>
+			<item value="추천매물"/>
+			<item value="추천"/>
+			<item value="login_error"/>
+			<item value=".p"/>
+			<item value="p"/>
+			<item value="성공"/>
+			<item value="error"/>
 			<item value=" onclik"/>
-			<item value="onclik"/>
-			<item value="png"/>
-			<item value="hr"/>
 		</list>
 		<list key="replacehistory">
 			<item value=""/>

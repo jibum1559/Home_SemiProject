@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename compilation unit &apos;com.kh.semi.likeList.LikeRealestat.java&apos; to &apos;LikeRealestate.java&apos;&#x0D;&#x0A;- Original project: &apos;LikeList&apos;&#x0D;&#x0A;- Original element: &apos;com.kh.semi.likeList.LikeRealestat.java&apos;&#x0D;&#x0A;- Renamed element: &apos;com.kh.semi.likeList.LikeRealestate.java&apos;" description="Rename compilation unit &apos;LikeRealestat.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src\/main\/java&lt;com.kh.semi.likeList{LikeRealestat.java" name="LikeRealestate.java" references="false" stamp="1699720214046" version="1.0"/>
-</session>
